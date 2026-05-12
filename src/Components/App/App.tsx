@@ -1,3 +1,9 @@
+import UserCard from "../../server/api";
+
 export default function App() {
-  return <div>App</div>;
+  return (
+    <div>
+      <UserCard />
+    </div>
+  );
 }
