@@ -22,12 +22,12 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
 
     document.addEventListener("keydown", handleEsc);
 
-    const originalOverflow = document.body.style.overflow;
+    const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
     return () => {
       document.removeEventListener("keydown", handleEsc);
-      document.body.style.overflow = originalOverflow;
+      document.body.style.overflow = prevOverflow;
     };
   }, [isOpen, onClose]);
 
