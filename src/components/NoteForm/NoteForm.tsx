@@ -21,7 +21,7 @@ const TAGS: NoteTag[] = ["Todo", "Work", "Personal", "Meeting", "Shopping"];
 
 const schema: Yup.ObjectSchema<FormValues> = Yup.object({
   title: Yup.string().min(3).max(50).required(),
-  content: Yup.string().max(500).required(),
+  content: Yup.string().max(500).default(""),
   tag: Yup.mixed<NoteTag>().oneOf(TAGS).required(),
 });
 
