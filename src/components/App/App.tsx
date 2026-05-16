@@ -28,6 +28,7 @@ export default function App() {
         perPage: 12,
         search,
       }),
+    placeholderData: (prev) => prev,
   });
 
   const deleteMutation = useMutation({

@@ -8,8 +8,3 @@ export interface Note {
   updatedAt: string;
   tag: NoteTag;
 }
-
-export interface SearchBoxProps {
-  value: string;
-  onChange: (value: string) => void;
-}
